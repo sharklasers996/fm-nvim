@@ -39,14 +39,15 @@ local config = {
         joshuto_cmd = "joshuto",
         lazygit_cmd = "lazygit",
         neomutt_cmd = "neomutt",
-        taskwarrior_cmd = "taskwarrior-tui"
+        taskwarrior_cmd = "taskwarrior-tui",
+        phm_cmd = "phm"
     },
     mappings = {
         vert_split = "<C-v>",
         horz_split = "<C-h>",
         tabedit = "<C-t>",
         edit = "<C-e>",
-        ESC = "<ESC>"
+        ESC = "<C-c>"
     }
 }
 
@@ -287,6 +288,15 @@ function M.TaskWarriorTUI()
         createWin(config.cmds.taskwarrior_cmd, "<CR>")
     elseif config.ui.default == "split" then
         createSplit(config.cmds.taskwarrior_cmd, "<CR>")
+    end
+end
+
+function M.Phm(dir)
+    dir = dir or "."
+    if config.ui.default == "float" then
+        createWin(config.cmds.phm_cmd .. " --write-on-edit /tmp/fm-nvim --open-dir " .. dir, "l")
+    elseif config.ui.default == "split" then
+        createSplit(config.cmds.phm_cmd .. " --write-on-edit /tmp/fm-nvim --open-dir " .. dir, "l")
     end
 end
 
