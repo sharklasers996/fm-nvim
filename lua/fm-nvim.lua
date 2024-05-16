@@ -40,7 +40,8 @@ local config = {
         lazygit_cmd = "lazygit",
         neomutt_cmd = "neomutt",
         taskwarrior_cmd = "taskwarrior-tui",
-        phm_cmd = "phm"
+        phm_cmd = "phm",
+        yazi_cmd = "yazi"
     },
     mappings = {
         vert_split = "<C-v>",
