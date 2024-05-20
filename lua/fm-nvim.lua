@@ -304,9 +304,9 @@ end
 function M.Yazi(dir)
     dir = dir or "."
     if config.ui.default == "float" then
-        createWin(config.cmds.yazi_cmd .. " --chooser-file /tmp/fm-nvim " .. dir, "<CR>")
+        createWin(config.cmds.yazi_cmd .. " --chooser-file /tmp/fm-nvim " .. dir, "o")
     elseif config.ui.default == "split" then
-        createSplit(config.cmds.yazi_cmd .. " --chooser-file /tmp/fm-nvim " .. dir, "<CR>")
+        createSplit(config.cmds.yazi_cmd .. " --chooser-file /tmp/fm-nvim " .. dir, "o")
     end
 end
 
