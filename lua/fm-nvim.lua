@@ -47,7 +47,7 @@ local config = {
         vert_split = "<C-v>",
         horz_split = "<C-h>",
         tabedit = "<C-t>",
-        edit = "<C-e>",
+        edit = "<CR>",
         ESC = "<C-c>"
     }
 }
